@@ -9,20 +9,21 @@ use Snc\RedisBundle\Client\Phpredis\Client as RedisClient;
 
 use Mayeco\RedisEnableBundle\Model\RedisEnable;
 
-class RedisSetup {
+class RedisSetup
+{
 
-  protected $redisclient;
+    protected $redisclient;
 
-  public function __construct(RedisClient $redis) {
+    public function __construct(RedisClient $redis) {
 
-    $this->redisclient = $redis;
+        $this->redisclient = $redis;
 
-  }
+    }
 
-  public function onKernelRequest(GetResponseEvent $event) {
+    public function onKernelRequest(GetResponseEvent $event) {
 
-    RedisEnable::setRedis($this->redisclient);
+        RedisEnable::setRedis($this->redisclient);
 
-  }
+    }
 
 }
