@@ -17,13 +17,11 @@ class RedisSetup
     public function __construct(RedisClient $redis) {
 
         $this->redisclient = $redis;
-
     }
 
     public function onKernelRequest(GetResponseEvent $event) {
 
         RedisEnable::setRedis($this->redisclient);
-
     }
 
 }
