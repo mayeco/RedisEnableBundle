@@ -1,0 +1,23 @@
+{
+    "name": "mayeco/redis-enable-bundle",
+    "license": "MIT",
+    "type": "symfony-bundle",
+    "description": "Redis enable for Symfony2",
+    "keywords": ["redis"],
+    "homepage": "https://github.com/mayeco/RedisEnableBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mario Young",
+            "email": "yo@maye.co"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.2",
+        "snc/redis-bundle": "1.1.x-dev"
+    },
+    "autoload": {
+        "psr-0": { "Mayeco\\RedisEnableBundle": "" }
+    },
+    "target-dir": "Mayeco/RedisEnableBundle"
+}

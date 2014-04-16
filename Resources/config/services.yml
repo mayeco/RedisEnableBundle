@@ -1,0 +1,10 @@
+parameters:
+    redis_enable.listener.class: Mayeco\RedisEnableBundle\EventListener\RedisSetup
+
+services:
+    redis_enable.listener.service:
+        class: %redis_enable.listener.class%
+        arguments:
+            - "@snc_redis.default_client"
+        tags: 
+            - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest }
