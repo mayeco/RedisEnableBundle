@@ -6,7 +6,6 @@ use Snc\RedisBundle\Client\Phpredis\Client as RedisClient;
 
 class RedisEnable
 {
-
     protected static $redis;
 
     public static function redis() {
@@ -18,5 +17,4 @@ class RedisEnable
 
         static::$redis = $redis;
     }
-
 }
