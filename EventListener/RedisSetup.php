@@ -11,7 +11,6 @@ use Mayeco\RedisEnableBundle\Model\RedisEnable;
 
 class RedisSetup
 {
-
     protected $redisclient;
 
     public function __construct(RedisClient $redis) {
@@ -23,5 +22,4 @@ class RedisSetup
 
         RedisEnable::setRedis($this->redisclient);
     }
-
 }
